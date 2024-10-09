@@ -1,2 +1,2 @@
 # rise
-A notes/resources web portal for the Information Science Engineering Branch in Ramaiah Institute of Technology, Bangalore.
+A notes/resources portal for the students of Information Science Engineering in Ramaiah Institute of Technology, Bangalore.
