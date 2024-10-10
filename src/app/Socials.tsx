@@ -1,16 +1,16 @@
-import { Button } from "@/components/ui/button"
-import Heading from "./Heading"
+import { Button } from "@/components/ui/button";
+import Heading from "./Heading";
 
 interface SocialProps {
-    platform: string
-    link: string
-    icon: string
+    platform: string;
+    link: string;
+    icon: string;
 }
 
-const Social: React.FC<SocialProps> = ({platform, link, icon}) => {
+const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
     return (
-        <Button className="w-full py-5">
-            <a href={link} className="block w-full"> {/* Ensure the anchor takes full width */}
+        <Button className="w-full h-12 py-4 sm:py-3"> {/* Adjust padding based on screen size */}
+            <a href={link} className="block w-full">
                 <div className="flex justify-between items-center w-full">
                     <div className="platform">
                         {platform}
@@ -29,24 +29,21 @@ const Socials: React.FC = () => {
         {platform: "MSRIT Discord", link: "https://discord.gg/W7yMs9E9Eb", icon: "/icons/discord.svg"},
         {platform: "MSRIT Archive Hub", link: "https://discord.gg/kRkGRqC5ZX", icon: "/icons/discord.svg"},
         {platform: "r/MSRITians", link: "https://reddit.com/r/MSRITians", icon: "/icons/reddit.svg"},
-        {platform: "Official Website", link: "https://www.msrit.edu/department/ise.html", icon: "/icons/college.svg"},
-    ]
+        {platform: "Official Site", link: "https://www.msrit.edu/department/ise.html", icon: "/icons/college.svg"},
+    ];
 
     return (
-        <div className="socials">
-            <Heading heading="Socials"/>
-            <div className="grid lg:grid-cols-4 sm:grid-cols-1 mt-10 w-4/5 m-auto gap-3 ">
+        <div className="socials mb-10">
+            <Heading heading="Socials" />
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
                 {socials.map((item, key) => (
                     <div className="social" key={key}>
-                        <Social platform={item.platform} link={item.link} icon={item.icon}/>
-                
+                        <Social platform={item.platform} link={item.link} icon={item.icon} />
                     </div>
                 ))}
             </div>
-
         </div>
+    );
+};
 
-    )
-}
-
-export default Socials
+export default Socials;

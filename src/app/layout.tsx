@@ -8,6 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon/rise.svg" type="image/svg+xml" />
+        <title>rISE - MSRIT ISE</title>
+      </head>
       <body>
         <Navbar />
         {children}
