@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { FaGithub } from 'react-icons/fa6'
 
 interface ProjectProps {
     name: string
@@ -17,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({name, description, ghlink}) => {
                 <div className="link">
                     <Button>
                         <a href={ghlink}>
-                            <Image src="/icons/github.svg" alt={name} width={24} height={24}/>
+                            <FaGithub size={24}/>
                         </a>                        
                     </Button>
                 </div>

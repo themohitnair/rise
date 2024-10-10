@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Heading from "./Heading";
-import Image from "next/image";
+import { FaDiscord, FaReddit } from 'react-icons/fa';
+import { IoSchool } from 'react-icons/io5';
 
 interface SocialProps {
     platform: string;
     link: string;
-    icon: string;
+    icon: React.ReactNode;
 }
 
 const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
@@ -17,7 +18,7 @@ const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
                         {platform}
                     </div>
                     <div className="icon">
-                        <Image src={icon} alt={platform} width={24} height={24}/>
+                        {icon}
                     </div>
                 </div>
             </a>
@@ -27,10 +28,10 @@ const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
 
 const Socials: React.FC = () => {
     const socials = [
-        {platform: "MSRIT Discord", link: "https://discord.gg/W7yMs9E9Eb", icon: "/icons/discord.svg"},
-        {platform: "MSRIT Archive Hub", link: "https://discord.gg/kRkGRqC5ZX", icon: "/icons/discord.svg"},
-        {platform: "r/MSRITians", link: "https://reddit.com/r/MSRITians", icon: "/icons/reddit.svg"},
-        {platform: "Official Site", link: "https://www.msrit.edu/department/ise.html", icon: "/icons/college.svg"},
+        {platform: "MSRIT Discord", link: "https://discord.gg/W7yMs9E9Eb", icon: <FaDiscord size={24} />},
+        {platform: "MSRIT Archive Hub", link: "https://discord.gg/kRkGRqC5ZX", icon: <FaDiscord size={24} />},
+        {platform: "r/MSRITians", link: "https://reddit.com/r/MSRITians", icon: <FaReddit size={24} />},
+        {platform: "Official Site", link: "https://www.msrit.edu/department/ise.html", icon: <IoSchool size={24} />},
     ];
 
     return (

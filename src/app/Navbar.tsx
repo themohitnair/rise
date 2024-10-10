@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@radix-ui/react-navigation-menu"
 import { Menu, X } from 'lucide-react'
+import { ModeToggle } from './ModeToggle'
 
 interface NavItemProps {
     href: string
@@ -13,7 +14,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, label }) => {
     return (
         <NavigationMenuItem>
             <NavigationMenuLink asChild>
-                <a href={href} className="font-fira text-black hover:text-gray-700">
+                <a href={href} className="font-fira text-foreground hover:text-foreground/70">
                     {label}
                 </a>
             </NavigationMenuLink>
@@ -31,10 +32,10 @@ const Navbar: React.FC = () => {
     ]
 
     return (
-        <header className="top-0 sticky border border-b-[1px] px-4 md:px-6 py-4 bg-white">
+        <header className="top-0 sticky border border-b-[1px] px-4 md:px-6 py-4 bg-background">
             <div className="flex items-center justify-between">
                 <div className="font-fira font-extrabold text-2xl md:text-3xl">
-                    <a href="/">
+                    <a href="/" className="text-foreground">
                         rISE
                     </a>
                 </div>
@@ -45,19 +46,21 @@ const Navbar: React.FC = () => {
                         ))}
                     </NavigationMenuList>
                 </NavigationMenu>
-                <button 
-                    className="md:hidden"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                <div className="flex items-center space-x-4">
+                    <ModeToggle />
+                    <button 
+                        className="md:hidden text-foreground"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
             </div>
             {isMenuOpen && (
                 <nav className="mt-4 md:hidden">
                     <ul className="flex flex-col space-y-4 font-fira">
                         {navItems.map((item, key) => (
                             <li key={key}>
-                                <a href={item.href} className="text-black hover:text-gray-700">
+                                <a href={item.href} className="text-foreground hover:text-foreground/70">
                                     {item.label}
                                 </a>
                             </li>
