@@ -11,7 +11,7 @@ Contributions can be of any type. They could be Previous Year Question Papers, I
 
 ### Projects
 This site contains a registry of all projects owned and contributed to by ISE students. These are ranked by stars and displayed. 
-To add your project, submit a pull request to the repository. Modify only the file called projectsList.ts within the projects subdirectory of /src/app.
+To add your project, submit a pull request to the repository. Modify only the file called [projectsList.ts](https://github.com/themohitnair/rise/blob/main/src/app/projects/projectsList.ts) within the [projects](https://github.com/themohitnair/rise/tree/main/src/app/projects) subdirectory of [/src/app](https://github.com/themohitnair/rise/tree/main/src/app).
 
     ```js
     const projectsList: ProjectData[] = [
