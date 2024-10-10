@@ -1,6 +1,6 @@
 import Project from "./Project"
 
-const Projects = () => {
+const ProjectsPage = () => {
     const projects = [
         {
             name: "project1",
@@ -20,4 +20,4 @@ const Projects = () => {
 
 }
 
-export default Projects
+export default ProjectsPage

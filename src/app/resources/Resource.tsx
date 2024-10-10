@@ -1,27 +1,26 @@
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import React from "react"
+import { Card, CardHeader, CardTitle } from "@/components/ui/card"
+import { ExternalLink } from "lucide-react"
 
-interface ResourceProps {
+export interface ResourceProps {
     name: string
     link: string
     year: number
     semester: number
 }
 
-const Resource: React.FC<ResourceProps> = ({name, link, year, semester}) => {
+const Resource: React.FC<ResourceProps> = ({ name, link }) => {
     return (
-        <Button className="w-full h-10">            
-            <a href={link} className="w-full">
-                <div className="w-full link font-fira flex justify-between items-center">
-                    <div className="linkname">
-                        {name}
-                    </div>
-                    <div className="icon">
-                        <Image src="/icons/link.svg" alt="link" height={24} width={24}/>                                       
-                    </div>                
-                </div>  
+        <Card className="w-full mb-2 font-fira">
+            <a href={link} className="block" target="_blank" rel="noopener noreferrer">
+                <CardHeader className="p-4">
+                <CardTitle className="text-sm font-medium flex justify-between items-center">
+                    <span>{name}</span>
+                    <ExternalLink className="h-4 w-4" />
+                </CardTitle>
+                </CardHeader>
             </a>
-        </Button>
+        </Card>
     )
 }
 
