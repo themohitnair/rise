@@ -1,9 +1,9 @@
 const Welcome = () => {
     return (
-        <div className="text-center font-fira text-8xl  xl:text-9xl md:text-6xl sm:text-4xl xs:text-2xl mt-10">
+        <div className="text-center font-fira m-auto text-4xl sm:text-6xl md:text-8xl xl:text-9xl mt-10">
             Welcome to rISE
         </div>
     )
 }
 
-export default Welcome
+export default Welcome;
