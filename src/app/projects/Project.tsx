@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import { FaGithub } from 'react-icons/fa6'
 
 interface ProjectProps {
