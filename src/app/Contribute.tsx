@@ -1,6 +1,5 @@
 import Info from "./Info"
 import Heading from "./Heading"
-import { Button } from "@/components/ui/button"
 
 const Contribute: React.FC = () => {
     const email = "mohitnair051204@gmail.com"

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Heading from "./Heading";
+import Image from "next/image";
 
 interface SocialProps {
     platform: string;
@@ -16,7 +17,7 @@ const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
                         {platform}
                     </div>
                     <div className="icon">
-                        <img src={icon} alt={platform} className="w-7 h-7"/>
+                        <Image src={icon} alt={platform}/>
                     </div>
                 </div>
             </a>
