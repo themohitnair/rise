@@ -17,7 +17,7 @@ const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
                         {platform}
                     </div>
                     <div className="icon">
-                        <Image src={icon} alt={platform}/>
+                        <Image src={icon} alt={platform} width={24} height={24}/>
                     </div>
                 </div>
             </a>
