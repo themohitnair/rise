@@ -1,4 +1,9 @@
 import Project from "./Project"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: 'rISE - Projects',
+}
 
 const ProjectsPage = () => {
     const projects = [
@@ -15,7 +20,7 @@ const ProjectsPage = () => {
                     <Project name={item.name} description={item.description} ghlink={item.ghlink} />
                 </div>
             ))}            
-        </div>
+        </div>        
     )
 
 }

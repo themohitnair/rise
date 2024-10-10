@@ -11,7 +11,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon/rise.svg" type="image/svg+xml" />
-        <title>rISE - MSRIT ISE</title>
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

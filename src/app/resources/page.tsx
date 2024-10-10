@@ -2,6 +2,11 @@ import React from "react"
 import Resources from "./Resources"
 import { ResourceProps } from "./Resource"
 import Heading from "../Heading"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: 'rISE - Resources',
+}
 
 const allResources: ResourceProps[] = [
     {name: "Textbooks", link: "https://github.com/themohitnair/3rd-Sem-Textbooks", year: 2022, semester: 3},

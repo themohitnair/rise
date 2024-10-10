@@ -2,6 +2,11 @@ import Contribute from "./Contribute";
 import Info from "./Info";
 import Socials from "./Socials";
 import Welcome from "./Welcome";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'rISE - Home',
+}
 
 export default function Home() {
   const text = [
