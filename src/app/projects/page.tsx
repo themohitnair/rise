@@ -1,33 +1,13 @@
 import { Metadata } from "next"
 import Project from "./Project"
 import githubFetchRepoInformation from "./ghUtils";
+import projectsList from "./projectsList";
 
 export const metadata: Metadata = {
     title: 'rISE - Projects',
 }
 
-interface ProjectData {
-    owner: string;
-    repo: string;
-    description?: string;
-}
-
 async function getProjects() {
-    const projectsList: ProjectData[] = [
-        {
-            owner: "themohitnair",
-            repo: "skyblog",
-        },
-        {
-            owner: "themohitnair",
-            repo: "sfnx"
-        },
-        {
-            owner: "themohitnair",
-            repo: "distrowiz"
-        }
-    ];
-
     const projectPromises = projectsList.map(async (project) => {
         const info = await githubFetchRepoInformation(project.owner, project.repo);
         return info ? {
