@@ -1,5 +1,5 @@
 interface InfoProps {
-    text: string
+    text: string | React.ReactNode;
 }
 
 const Info: React.FC<InfoProps> = ({ text }) => {

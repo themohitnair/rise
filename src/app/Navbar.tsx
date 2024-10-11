@@ -25,10 +25,8 @@ const NavItem: React.FC<NavItemProps> = ({ href, label }) => {
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Ensure that isMenuOpen is set appropriately after initial render
     useEffect(() => {
-        // This effect runs only on the client
-        setIsMenuOpen(false); // Ensures it's closed initially
+        setIsMenuOpen(false);
     }, []);
 
     const navItems = [
