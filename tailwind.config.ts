@@ -10,8 +10,7 @@ const config: Config = {
   theme: {
   	extend: {
   		fontFamily: {
-  			fira: 'Fira',
-  			firabold: 'Fira Bold'
+  			fira: 'Geist Mono',
   		},
   		colors: {
   			primary: {

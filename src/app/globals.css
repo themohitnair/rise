@@ -10,9 +10,16 @@
 }
 
 @font-face {
-  font-family: 'Fira Bold';
-  src: url('/fonts/fira.woff2') format('woff2');
-  font-weight: 900;
+  font-family: 'Geist Mono';
+  src: url('/fonts/geistmono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/geist.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
