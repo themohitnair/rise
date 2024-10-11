@@ -1,5 +1,3 @@
-import Info from "../Info"
-
 interface PointsProps {
     prelim: string
     points: string[]
