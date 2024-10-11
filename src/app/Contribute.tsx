@@ -2,7 +2,7 @@ import Info from "./Info"
 import Heading from "./Heading"
 
 const Contribute: React.FC = () => {
-    const email = "rubyrust060504@gmail.com"
+    const email = "riserit@proton.me"
     
     const text = [
         `You may contribute to these notes and resources  by mailing links or documents to ${email}. While mailing material, please mention the batch (year of commencement), semester, and subject in the beginning of the mail along with your full name (to credit your contribution).`,
