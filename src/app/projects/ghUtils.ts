@@ -1,6 +1,7 @@
 import * as yaml from 'js-yaml';
 
 interface RepoInfo {
+  owner: string;
   name: string;
   description: string;
   stars: number;
@@ -70,6 +71,9 @@ const githubFetchRepoInformation = async (owner: string, reponame: string): Prom
       description: string | null;
       stargazers_count: number;
       html_url: string;
+      owner: {
+        login: string;
+      };
     }
     
     const repoData = await repoResponse.json() as RepoData;
@@ -96,6 +100,7 @@ const githubFetchRepoInformation = async (owner: string, reponame: string): Prom
       .sort((a, b) => b.percentage - a.percentage);
 
     return {
+      owner: repoData.owner.login,
       name: repoData.name,
       description: repoData.description || '',
       stars: repoData.stargazers_count,
