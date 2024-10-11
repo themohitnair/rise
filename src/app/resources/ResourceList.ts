@@ -168,6 +168,18 @@ const allResources: ResourceProps[] = [
         link: "https://drive.google.com/drive/folders/1Rd8T-2tbMd0VvjHpNFv-5tukjXl8ghN5?usp=drive_link",
         year: 2022,
         semester: 1
+    },
+    {
+        name: "CIE and SEE QPs (2023)",
+        link: "https://drive.google.com/drive/folders/1St7oM_2r3PJinNu0hxto_R9rsnUh4sCP?usp=drive_link",
+        year: 2023,
+        semester: 4
+    },
+    {
+        name: "CIE and SEE QPs (2023)",
+        link: "https://drive.google.com/drive/folders/1whIn3Re7ZwN_AogzopOjGTn8Nx-AuYI9?usp=drive_link",
+        year: 2023,
+        semester: 3
     }
 ]
 
