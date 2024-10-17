@@ -186,6 +186,12 @@ const allResources: ResourceProps[] = [
         link: "https://drive.google.com/drive/folders/1q7X0uemHMGFlCcVFSgJEakE84f4E_oXb?usp=sharing",
         year: 2024,
         semester: 5
+    },
+    {
+        name: "Textbooks",
+        link: "https://github.com/suchitg04/5th-Sem-Textbooks/",
+        year: 2024,
+        semester: 5
     }
 ]
 
