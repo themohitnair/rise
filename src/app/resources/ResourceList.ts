@@ -180,6 +180,12 @@ const allResources: ResourceProps[] = [
         link: "https://drive.google.com/drive/folders/1whIn3Re7ZwN_AogzopOjGTn8Nx-AuYI9?usp=drive_link",
         year: 2023,
         semester: 3
+    },
+    {
+        name: "Subjectwise Notes (2024)",
+        link: "https://drive.google.com/drive/folders/1q7X0uemHMGFlCcVFSgJEakE84f4E_oXb?usp=sharing",
+        year: 2024,
+        semester: 5
     }
 ]
 
