@@ -25,18 +25,6 @@ const projectsList: ProjectData[] = [
         owner: "sathya-pramodh",
         repo: "linux-mcsr"
     },
-    {
-        owner: "tesselslate",
-        repo: "resetti"
-    },
-    {
-        owner: "KingContaria",
-        repo: "seedqueue"
-    },
-    {
-        owner: "PaceMan-MCSR",
-        repo: "pacemanbot"
-    }
 ];
 
 export default projectsList;
