@@ -32,7 +32,6 @@ const Navbar: React.FC = () => {
     const navItems = [
         { href: "/resources", label: "Resources" },
         { href: "/projects", label: "Projects" },
-        { href: "/syllabus", label: "Syllabus" },
         { href: "https://github.com/themohitnair/rise", label: "Source Code"},        
     ];
 
