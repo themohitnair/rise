@@ -25,6 +25,10 @@ const projectsList: ProjectData[] = [
         owner: "sathya-pramodh",
         repo: "linux-mcsr"
     },
+    {
+        owner: "themohitnair",
+        repo: "rise"
+    }
 ];
 
 export default projectsList;
