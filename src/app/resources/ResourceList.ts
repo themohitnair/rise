@@ -3,13 +3,13 @@ import { ResourceProps } from "./Resource"
 const allResources: ResourceProps[] = [
     {
         name: "Textbooks", 
-        link: "https://github.com/themohitnair/3rd-Sem-Textbooks", 
+        link: "https://drive.google.com/drive/folders/1m_JUQuiNuNjT-yeuhuObWepmPzKaA4LY?usp=sharing", 
         year: 2022, 
         semester: 3
     },
     {
         name: "Textbooks", 
-        link: "https://github.com/themohitnair/4th-Sem-Textbooks", 
+        link: "https://drive.google.com/drive/folders/1lwUs_QJa3NMrazPQ7bCFzS42ub7IJxQK?usp=sharing", 
         year: 2022, 
         semester: 4
     },
@@ -189,7 +189,7 @@ const allResources: ResourceProps[] = [
     },
     {
         name: "Textbooks",
-        link: "https://github.com/suchitg04/5th-Sem-Textbooks/",
+        link: "https://drive.google.com/drive/folders/1o_GtFa_QRpYZrMWpBx6bK0sS73BE5_6i?usp=sharing",
         year: 2024,
         semester: 5
     }
