@@ -1,23 +1,26 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
   DialogTitle,
   DialogDescription,
-} from "@/components/ui/dialog";
-import { FileText } from "lucide-react";
+} from "@/components/ui/dialog"
+import { FileText } from "lucide-react"
 
 interface SyllabusDialogProps {
-  year: "First" | "Second" | "Third" | "Fourth";
-  pdfPath: string;
+  year: "First" | "Second" | "Third" | "Fourth"
+  pdfPath: string
 }
 
 const SyllabusDialog: React.FC<SyllabusDialogProps> = ({ year, pdfPath }) => (
   <Dialog>
     <DialogTrigger asChild>
-      <Button variant="outline" className="flex items-center justify-start py-5">
-        <FileText className="mr-2" /> {year} Year
+      <Button 
+        variant="outline" 
+        className="flex items-center justify-start py-5 bg-white text-black border-black hover:bg-gray-100 hover:text-black"
+      >
+        <FileText className="mr-2 text-black" /> {year} Year
       </Button>
     </DialogTrigger>
 
@@ -35,6 +38,6 @@ const SyllabusDialog: React.FC<SyllabusDialogProps> = ({ year, pdfPath }) => (
       />
     </DialogContent>
   </Dialog>
-);
+)
 
-export default SyllabusDialog;
+export default SyllabusDialog
