@@ -16,12 +16,12 @@ interface SyllabusDialogProps {
 const SyllabusDialog: React.FC<SyllabusDialogProps> = ({ year, pdfPath }) => (
   <Dialog>
     <DialogTrigger asChild>
-      <Button variant="outline" className="flex items-center justify-start">
+      <Button variant="outline" className="flex items-center justify-start py-5">
         <FileText className="mr-2" /> {year} Year
       </Button>
     </DialogTrigger>
 
-    <DialogContent className="w-[90vw] h-[80vh] max-h-[80vh] p-4 rounded-lg border flex flex-col">
+    <DialogContent className="w-[90vw] max-w-full h-[80vh] max-h-[90vh] p-4 rounded-lg border flex flex-col">
       <DialogTitle asChild className="flex justify-center items-center">
         <h2>{year} Year Syllabus</h2>
       </DialogTitle>
@@ -30,9 +30,8 @@ const SyllabusDialog: React.FC<SyllabusDialogProps> = ({ year, pdfPath }) => (
       </DialogDescription>
       <iframe
         src={pdfPath}
-        className="rounded-md border h-full"
-        width="100%"
-        height="100%"
+        className="rounded-md border h-full w-full"
+        style={{ flexGrow: 1 }}
       />
     </DialogContent>
   </Dialog>

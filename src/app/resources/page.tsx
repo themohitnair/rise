@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import allResources from "./ResourceList";
 import Points from "./Points";
 import Syllabus from "./Syllabus";
+import Info from "../Info";
 
 export const metadata: Metadata = {
   title: "rISE - Resources",
