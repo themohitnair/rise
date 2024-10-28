@@ -17,7 +17,7 @@ export default function ResourcesPage() {
     "Lab Repositories might need updation in the future with changing curriculum. You are free to send pull requests to update the repositories or otherwise (for other corrections and changes).",
     "The website or its makers aren't liable for any harm or misunderstanding caused by the notes links hosted here. Use them at your own risk. These are crowdsourced notes and resources.",
     <>
-      To contribute to these notes, mail us at <a href={`mailto:${email}`} className="hover:text-gray-500">{email}</a> with the links or documents. At the beginning of such mail submissions, mention the year (20XX), semester (1-8) and subject. For instance, '2022 3rd OS' signifies a submission to contribute to the Operating System subject resources for the 3rd semester for the Academic year 2022-23.
+      To contribute to these notes, mail us at <a href={`mailto:${email}`} className="hover:text-gray-500">{email}</a> with the links or documents. At the beginning of such mail submissions, mention the year (20XX), semester (1-8) and subject. For instance, &apos;2022 3rd OS&apos; signifies a submission to contribute to the Operating System subject resources for the 3rd semester for the Academic year 2022-23.
     </>,
   ]
 
