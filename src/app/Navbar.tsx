@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@radix-ui/react-navigation-menu"
 import { Menu, X } from 'lucide-react'
-import { ModeToggle } from './ModeToggle'
 
 interface NavItemProps {
     href: string
@@ -51,7 +50,7 @@ const Navbar: React.FC = () => {
                     </NavigationMenuList>
                 </NavigationMenu>
                 <div className="flex items-center space-x-4">
-                    <ModeToggle />
+                    {/* Removed ModeToggle */}
                     <button 
                         className="md:hidden text-foreground"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
