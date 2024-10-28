@@ -16,7 +16,7 @@ export default function RootLayout({
         <meta property="og:image" content="/images/preview.png" />
         <meta property="og:url" content="https://riserit.vercel.app" />
       </head>
-      <body>
+      <body className="font-fira">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Navbar />
           {children}

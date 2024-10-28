@@ -22,7 +22,7 @@ export default function InfoPoints({ prelim, points }: InfoPointsProps) {
         className="flex items-center gap-2"
       >
         <Info className="h-4 w-4" />
-        <span>{showPoints ? "Hide" : "Show"} Important Points</span>
+        <span>{showPoints ? "Hide" : "Show"} Info</span>
       </Button>
       <div
         id="points-section"

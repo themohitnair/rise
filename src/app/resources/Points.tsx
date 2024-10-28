@@ -5,7 +5,7 @@ interface PointsProps {
   
 const Points: React.FC<PointsProps> = ({ prelim, points }) => {
     return (
-        <div className="info font-fira">
+        <div className="info">
         {prelim}
         <ul className="list-disc ml-3">
             {points.map((item, key) => (

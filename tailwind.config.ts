@@ -11,6 +11,7 @@ const config: Config = {
   	extend: {
   		fontFamily: {
   			fira: 'Geist Mono',
+            geist: 'Geist'
   		},
   		colors: {
   			primary: {

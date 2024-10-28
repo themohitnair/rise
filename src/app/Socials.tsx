@@ -11,7 +11,7 @@ interface SocialProps {
 
 const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
     return (
-        <Button className="w-full h-10 py-4 sm:py-3 font-fira">
+        <Button className="w-full h-10 py-4 sm:py-3">
             <a href={link} className="block w-full">
                 <div className="flex justify-between items-center w-full">
                     <div className="platform">

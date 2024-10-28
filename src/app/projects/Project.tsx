@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({owner, name, description, ghlink, lang
   return (
     <Card className="w-full my-4">
       <CardHeader>
-        <div className="heading flex justify-between items-center font-fira">
+        <div className="heading flex justify-between items-center">
           <div className="name text-xl font-bold">
             {owner}/{name}
           </div>
@@ -38,7 +38,7 @@ const Project: React.FC<ProjectProps> = ({owner, name, description, ghlink, lang
         </div>
       </CardHeader>
       <CardContent>
-        <p className="font-fira">{description}</p>
+        <p className="">{description}</p>
       </CardContent>
       {languages.length > 0 && (
         <CardFooter>

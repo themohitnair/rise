@@ -10,7 +10,7 @@ const Resources: React.FC<ResourcesProps> = ({ resources }) => {
     const semesters = Array.from({ length: 8 }, (_, i) => i + 1)
 
     return (
-        <Accordion type="single" collapsible className="w-full font-fira">
+        <Accordion type="single" collapsible className="w-full">
         {semesters.map((semester) => {
             const semesterResources = resources.filter((resource) => resource.semester === semester)
             if (semesterResources.length === 0) return null

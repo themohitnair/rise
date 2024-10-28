@@ -3,22 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Fira';
-  src: url('/fonts/fira.woff2') format('woff2');
+  font-family: "Geist";
+  src: url("/fonts/geist.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/geistmono.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('/fonts/geist.woff') format('woff');
+  font-family: "Geist Mono";
+  src: url("/fonts/geistmono.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -87,4 +80,3 @@
     @apply bg-background text-foreground;
   }
 }
-

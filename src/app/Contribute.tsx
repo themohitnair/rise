@@ -14,7 +14,7 @@ const Contribute: React.FC = () => {
     ]
 
     return (        
-        <div className="font-fira">
+        <div className="">
             <Heading heading="Contribute"/>
             {text.map((item, key) => (
                 <div key={key} className="mt-5">

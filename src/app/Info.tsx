@@ -4,7 +4,7 @@ interface InfoProps {
 
 const Info: React.FC<InfoProps> = ({ text }) => {
     return (
-        <div className="info font-fira">
+        <div className="info">
             {text}
         </div>
     )
