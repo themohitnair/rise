@@ -4,6 +4,11 @@ import Heading from "../Heading"
 import allResources from "./ResourceList"
 import Syllabus from "./Syllabus"
 import InfoPoints from "./InfoPoints"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: 'rISE - Resources',
+}
 
 export default function ResourcesPage() {
   const prelim: string =
