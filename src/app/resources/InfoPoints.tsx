@@ -19,13 +19,7 @@ export default function InfoPoints({ prelim, points }: InfoPointsProps) {
             <Info className="w-4" />
             <span>{showPoints ? "Hide" : "Show"} Info</span>
         </Button>
-        <div
-            id="points-section"
-            className={`mt-4 transition-all duration-300 ease-in-out overflow-hidden ${showPoints ? 'opacity-100' : 'opacity-0'}`}
-            style={{
-                height: showPoints ? 'auto' : '0',
-            }}
-        >
+        <div id="points-section" className={`mt-4 transition-all duration-300 ease-in-out overflow-hidden ${showPoints ? 'opacity-100' : 'opacity-0'}`} style={{ height: showPoints ? 'auto' : '0', }}>
             <Points prelim={prelim} points={points} />
         </div>
     </div>

@@ -7,7 +7,7 @@ const Points: React.FC<PointsProps> = ({ prelim, points }) => {
     return (
         <div className="info">
         {prelim}
-        <ul className="list-disc ml-3">
+        <ul className="list-disc ml-5">
             {points.map((item, key) => (
             <li key={key}>{item}</li>
             ))}
