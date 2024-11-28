@@ -122,7 +122,7 @@ const allResources: ResourceProps[] = [
         semester: 4
     },
     {
-        name: "Design and Analysis of Algoriothms Lab Repository (2023)",
+        name: "Design and Analysis of Algorithms Lab Repository (2023)",
         link: "https://github.com/themohitnair/DAALab",
         year: 2023,
         semester: 4
