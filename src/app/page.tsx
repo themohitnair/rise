@@ -5,7 +5,7 @@ import Welcome from "./Welcome";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'rISE - Home',
+  title: 'RIT ISE - Home',
 }
 
 export default function Home() {

@@ -7,7 +7,7 @@ import InfoPoints from "./InfoPoints"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: 'rISE - Resources',
+    title: 'RIT ISE - Resources',
 }
 
 export default function ResourcesPage() {

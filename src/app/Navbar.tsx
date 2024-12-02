@@ -39,7 +39,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
                 <div className="font-extrabold text-2xl md:text-3xl">
                     <a href="/" className="text-foreground">
-                        ISE RIT
+                        RIT ISE
                     </a>
                 </div>
                 <div className="flex items-center">

@@ -4,7 +4,7 @@ import githubFetchRepoInformation from "./ghUtils";
 import projectsList from "./projectsList";
 
 export const metadata: Metadata = {
-  title: 'rISE - Projects',
+  title: 'RIT ISE - Projects',
 }
 
 async function getProjects() {
