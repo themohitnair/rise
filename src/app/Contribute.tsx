@@ -9,8 +9,7 @@ const Contribute: React.FC = () => {
             You may contribute to these notes and resources by mailing links or documents to <a href={`mailto:${email}`} className="hover:text-gray-500">{email}</a>.
             While mailing material, please mention the batch (year of commencement), semester, and subject in the beginning of the mail along with your full name (to credit your contribution).
         </>,
-        "For Example: 2022 3rd OS - Which refers to the 2022 batch 3rd Semester (ISE) Operating Systems subject.",
-        "Contributions can be of any type. They could be Previous Year Question Papers, Internal Question Papers, notes (PPTs, Documents or Handwritten) for any subject in the ISE Curriculum"
+        "Contributions can be of any type - Previous Year Question Papers, Internal Question Papers, notes (PPTs, Documents or Handwritten) for any subject in the ISE Curriculum"
     ]
 
     return (        
