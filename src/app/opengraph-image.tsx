@@ -15,14 +15,14 @@ export default function Image() {
         (
         <div
             style={{
-                fontSize: 128,
-                background: 'white',
+                fontSize: 144,
+                background: 'black',
                 width: '100%',
                 height: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#0047AB',
+                color: '#ffffff',
             }}
         >
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
