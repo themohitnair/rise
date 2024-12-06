@@ -1,6 +1,20 @@
 import "./globals.css";
 import Navbar from "./Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'RIT ISE',
+    description: 'The official site of ISE RIT, Bangalore',
+    openGraph: {
+        title: 'RIT ISE',
+        description: 'The official site of ISE RIT, Bangalore',
+        url: 'https://riserit.vercel.app',
+        siteName: 'RIT ISE',
+        locale: 'en_US',
+        type: 'website',
+    },
+}
 
 export default function RootLayout({
   children,
@@ -9,13 +23,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head>
-                <link rel="shortcut icon" href="/favicon/rise.svg" type="image/svg+xml" />
-                <meta property="og:title" content="RIT ISE" />
-                <meta property="og:description" content="The official site of ISE RIT, Bangalore" />
-                <meta property="og:image" content="/images/preview.png" />
-                <meta property="og:url" content="https://riserit.vercel.app" />
-            </head>
             <body className="font-fira">
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
                 <Navbar />
