@@ -16,6 +16,7 @@ export default function Image() {
         <div
             style={{
                 fontSize: 144,
+                fontFamily: 'monospace',
                 background: 'black',
                 width: '100%',
                 height: '100%',
