@@ -41,7 +41,7 @@ export default function Navbar() {
         <header className="sticky top-0 border-b px-4 md:px-6 py-4 bg-background">
             <div className="flex items-center justify-between">
                 <div className="font-extrabold text-2xl md:text-3xl">
-                    <a href="/" className="text-foreground">
+                    <a href="/" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-pink-500 to-red-500">
                         RIT ISE
                     </a>
                 </div>
