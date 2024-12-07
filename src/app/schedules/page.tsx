@@ -7,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    return <SchedulesPage />
+    return (
+        <div className="min-h-[calc(100vh-4rem-4rem)] w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-6/7 m-auto">
+            <SchedulesPage />
+        </div>
+    )
 }

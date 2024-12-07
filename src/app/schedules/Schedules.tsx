@@ -1,48 +1,19 @@
-"use client";
-
-import React from "react";
-import { useAspectRatio } from "@/hooks/useAspectRatio";
 import Heading from "../Heading";
+import TimetableDialog from "./TimeTableDialog";
 
-export default function SchedulesPage() {
-    const Dimensions = useAspectRatio(2339, 1654);
+const SchedulesPage: React.FC = () => {
+    const thirdSemesterTimetable = "/pdfs/timetables/sem3.pdf";
+    const fifthSemesterTimetable = "/pdfs/timetables/sem5.pdf";
 
-    return (
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="space-y-12 mt-8">
-                <ScheduleSection
-                    title="Semester 3"
-                    pdfPath="/pdfs/timetables/sem3.pdf"
-                    dimensions={Dimensions}
-                />
-                <ScheduleSection
-                    title="Semester 5"
-                    pdfPath="/pdfs/timetables/sem5.pdf"
-                    dimensions={Dimensions}
-                />
-            </div>
-        </div>
-    );
-}
-
-interface ScheduleSectionProps {
-    title: string;
-    pdfPath: string;
-    dimensions: { width: string; height: string };
-}
-
-function ScheduleSection({ title, pdfPath, dimensions }: ScheduleSectionProps) {
     return (
         <div>
-            <Heading heading={title} />
-            <div className="w-full flex justify-center">
-                <iframe
-                    src={pdfPath}
-                    className="border border-gray-300 rounded-lg shadow-lg mt-2"
-                    style={{ width: dimensions.width, height: dimensions.height }}
-                    title={title}
-                />
+            <Heading heading="Semester-wise Timetables"/>
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
+                <TimetableDialog semester="Third" pdfPath={thirdSemesterTimetable} />
+                <TimetableDialog semester="Fifth" pdfPath={fifthSemesterTimetable} />
             </div>
         </div>
     );
-}
+};
+
+export default SchedulesPage
