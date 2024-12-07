@@ -2,7 +2,7 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, BookOpen } from "lucide-react";
+import { FileText } from "lucide-react";
 
 interface MagazineProps {
     title: string;

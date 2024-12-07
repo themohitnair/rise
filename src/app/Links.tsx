@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { FaBook, FaDiscord, FaReddit } from 'react-icons/fa';
-import { IoSchool, IoDocument, IoInformationCircle, IoEasel, IoNewspaper } from 'react-icons/io5';
+import { FaDiscord, FaReddit } from 'react-icons/fa';
+import { IoSchool } from 'react-icons/io5';
 import Heading from "./Heading";
 
 interface SocialProps {
