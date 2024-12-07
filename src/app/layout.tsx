@@ -14,6 +14,9 @@ export const metadata: Metadata = {
         locale: 'en_US',
         type: 'website',
     },
+    icons: {
+        icon: "/favicon/rise.svg"
+    }
 }
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
@@ -21,13 +24,13 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
         <html lang="en">
         <body className="font-fira">
             <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
             >
-            <Navbar />
-            {children}
+                <Navbar />
+                {children}
             </ThemeProvider>
         </body>
         </html>

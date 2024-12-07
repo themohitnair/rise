@@ -33,7 +33,7 @@ export default function Navbar() {
         { href: "/resources", label: "Resources" },
         { href: "/projects", label: "Projects" },
         { href: "/schedules", label: "Schedules" },
-        { href: "https://github.com/themohitnair/rise", label: "Source Code"},        
+        { href: "/links", label: "Links" },
     ]
 
     return (
