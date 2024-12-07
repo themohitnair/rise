@@ -14,7 +14,7 @@ export function Footer() {
                             rel="noopener noreferrer"
                             className="flex items-center text-lg font-semibold hover:text-white transition-colors space-x-1"
                         >
-                            <FaGithub size={20} />
+                            <FaGithub size={20} className='mr-2 ml-2'/>
                             <span>Mohit Nair</span>
                         </Link>
                     </div>
