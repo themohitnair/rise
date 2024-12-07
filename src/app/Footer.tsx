@@ -1,28 +1,31 @@
 import Link from 'next/link'
+import { FaGithub } from 'react-icons/fa'
 
 export function Footer() {
     return (
-        <footer className="bottom-0 bg-primary/10 border text-white py-4">
-            <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                    <div className="mb-2 md:mb-0">
+        <footer className="bg-primary/10 border-gray-300 text-white py-4">
+            <div className="container mx-auto px-6">
+                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div className="flex items-center space-x-2">
+                        <span className="text-sm text-gray-400">Developed by</span>
                         <Link 
                             href="https://github.com/themohitnair" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="hover:text-white transition-colors"
+                            className="flex items-center text-lg font-semibold hover:text-white transition-colors space-x-1"
                         >
-                            Developed by Mohit Nair
+                            <FaGithub size={20} />
+                            <span>Mohit Nair</span>
                         </Link>
                     </div>
-                    <div>
+                    <div className="flex items-center space-x-2">
                         <Link 
                             href="https://github.com/themohitnair/rise" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="hover:text-white transition-colors"
+                            className="flex items-center text-lg font-semibold hover:text-white transition-colors space-x-1"
                         >
-                            Source Code
+                            <span>Source Code</span>
                         </Link>
                     </div>
                 </div>
