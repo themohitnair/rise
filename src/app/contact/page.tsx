@@ -2,7 +2,7 @@ import Socials from "./Socials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'RIT ISE - Links',
+    title: 'RIT ISE - Contact',
     description: "Some important links"
 }
 

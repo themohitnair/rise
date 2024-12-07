@@ -5,6 +5,7 @@ const Contribute: React.FC = () => {
     const email = "riserit@proton.me"
     
     const text = [
+        "All resources and notes on this platform are intended to be crowdsourced by the students of the ISE branch.",
         <>
             You may contribute to these notes and resources by mailing links or documents to <a href={`mailto:${email}`} className="hover:text-gray-500">{email}</a>.
             While mailing material, please mention the batch (year of commencement), semester, and subject in the beginning of the mail along with your full name (to credit your contribution).

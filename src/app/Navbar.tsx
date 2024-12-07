@@ -33,6 +33,7 @@ export default function Navbar() {
         { href: "/resources", label: "Resources" },
         { href: "/projects", label: "Projects" },
         { href: "/schedules", label: "Schedules" },
+        { href: "/voise", label: "VoISE" },
         { href: "/contact", label: "Contact" },
     ]
 

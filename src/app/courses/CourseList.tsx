@@ -5,11 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Course } from "./Courses"
 import { useState } from "react"
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
 } from "@/components/ui/select"
 
 interface CourseListProps {
@@ -83,7 +83,7 @@ function CourseCard({ course }: { course: Course }) {
                     )}
                 </div>
             </CardHeader>
-            <CardContent className="p-4 flex-grow flex flex-col justify-between">
+            <CardContent className="p-4 flex-grow flex flex-col justify-between bg-black">
                 <table className="w-full text-sm mb-4">
                     <thead>
                         <tr className="border-b">

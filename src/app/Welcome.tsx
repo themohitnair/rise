@@ -1,6 +1,6 @@
 const Welcome = () => {
     return (
-        <div className="text-center m-auto text-4xl sm:text-6xl md:text-8xl xl:text-9xl mt-10">
+        <div className="text-center m-auto text-5xl sm:text-5xl md:text-6xl xl:text-7xl mt-10">
             Welcome to RIT ISE
         </div>
     )

@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { FaBook, FaDiscord, FaReddit } from 'react-icons/fa';
-import { IoSchool, IoDocument, IoInformationCircle, IoEasel, IoNewspaper } from 'react-icons/io5';
 
 interface SocialProps {
     platform: string;
@@ -26,32 +24,29 @@ const Social: React.FC<SocialProps> = ({ platform, link, icon }) => {
 };
 
 const Socials: React.FC = () => {
-    const socials = [
-        {platform: "MSRIT Discord", link: "https://discord.gg/W7yMs9E9Eb", icon: <FaDiscord size={24} />},
-        {platform: "MSRIT Archive Hub", link: "https://discord.gg/kRkGRqC5ZX", icon: <FaDiscord size={24} />},
-        {platform: "r/MSRITians", link: "https://reddit.com/r/MSRITians", icon: <FaReddit size={24} />},
-        {platform: "Official Site", link: "https://www.msrit.edu/department/ise.html", icon: <IoSchool size={24} />},
-        {platform: "Student Information", link: "https://parents.msrit.edu", icon: <IoInformationCircle size={24} />},
-        {platform: "SEE Exam Results", link: "https://exam.msrit.edu", icon: <IoDocument size={24} />},
-        {platform: "Sudarshana", link: "https://msrit.edu/reports.html#Sudarshana", icon: <FaBook size={24} />},
-        {platform: "Pradarshana", link: "https://msrit.edu/reports.html#Pradarshana", icon: <IoEasel size={24} />},
-        {platform: "VoISE 2018-19", link: "/pdfs/magazines/18-19.pdf", icon: <IoNewspaper size={24} />},
-        {platform: "VoISE 2019-20", link: "/pdfs/magazines/19-20.pdf", icon: <IoNewspaper size={24} />},
-        {platform: "VoISE 2020-21", link: "/pdfs/magazines/20-21.pdf", icon: <IoNewspaper size={24} />},
-        {platform: "VoISE 2021-22", link: "/pdfs/magazines/21-22.pdf", icon: <IoNewspaper size={24} />}
+    const socials: SocialProps[] = [
+        // Empty array for now
     ];
 
     return (
         <div className="socials mb-10">
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
-                {socials.map((item, key) => (
-                    <div className="social" key={key}>
-                        <Social platform={item.platform} link={item.link} icon={item.icon} />
+                {socials.length > 0 ? (
+                    socials.map((item, key) => (
+                        <div className="social" key={key}>
+                            <Social platform={item.platform} link={item.link} icon={item.icon} />
+                        </div>
+                    ))
+                ) : (
+                    <div className="col-span-full">
+                        <p className="text-center text-muted-foreground py-8">
+                            No social links available at the moment.
+                        </p>
                     </div>
-                ))}
+                )}
             </div>
         </div>
     );
 };
 
-export default Socials;
+export default Socials
