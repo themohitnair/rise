@@ -28,7 +28,7 @@ async function getProjects() {
 const ProjectsPage = async () => {
     const projects = await getProjects();
     return (
-        <div className="w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-6/7 m-auto">
+        <div className="w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-6/7 m-auto min-h-[calc(100vh-4rem-4rem)] ">
         {projects.map((item, key) => (
             <Project
             key={key}

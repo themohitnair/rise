@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 import { MagazineCard } from "./MagazineCard";
+import Heading from "../Heading";
 
 export const metadata: Metadata = {
     title: "RIT ISE - VoISE Magazines",
@@ -16,13 +17,9 @@ export default function MagazinePage() {
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white">
+        <div className="min-h-[calc(100vh-4rem-4rem)] bg-black text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <h1 className="text-4xl font-extrabold text-center mb-8">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-                        VoISE Magazine
-                    </span>
-                </h1>
+                <Heading heading="VoISE Magazine" />
                 <p className="text-center text-white mb-12 max-w-2xl mx-auto">
                     Explore the latest editions of VoISE, showcasing the vibrant world of Information Science and Engineering at RIT Bangalore.
                 </p>

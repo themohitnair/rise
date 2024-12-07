@@ -50,7 +50,7 @@ export function CourseList({ courses }: CourseListProps) {
                 </TabsList>
                 {semesters.map((semester) => (
                     <TabsContent key={semester} value={semester.toString()}>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
                             {courses
                                 .filter(course => course.semester === parseInt(semester.toString()))
                                 .map(course => (
@@ -65,14 +65,14 @@ export function CourseList({ courses }: CourseListProps) {
 }
 
 function CourseCard({ course }: { course: Course }) {
+    const totalCredits = course.credits.theory + course.credits.tutorial + course.credits.practical;
+
     return (
-        <Card className="overflow-hidden h-full flex flex-col">
+        <Card className="overflow-hidden flex flex-col">
             <CardHeader className="bg-primary/10 pb-2 flex-shrink-0">
                 <div className="flex flex-wrap items-baseline justify-between mb-1 gap-2">
                     <span className="text-sm font-mono text-primary">{course.id}</span>
-                    <span className="text-xs text-muted-foreground">
-                        Total Credits: {course.credits.theory + course.credits.tutorial + course.credits.practical}
-                    </span>
+                    <span className="text-xs text-muted-foreground">Total Credits: {totalCredits}</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                     <CardTitle className="text-lg break-words">{course.title}</CardTitle>
@@ -83,29 +83,23 @@ function CourseCard({ course }: { course: Course }) {
                     )}
                 </div>
             </CardHeader>
-            <CardContent className="p-4 flex-grow flex flex-col justify-between bg-black">
-                <table className="w-full text-sm mb-4">
-                    <thead>
-                        <tr className="border-b">
-                            <th className="text-left py-2">Type</th>
-                            <th className="text-right py-2">Credits</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="border-b">
-                            <td className="py-2">Theory</td>
-                            <td className="text-right">{course.credits.theory}</td>
-                        </tr>
-                        <tr className="border-b">
-                            <td className="py-2">Tutorial</td>
-                            <td className="text-right">{course.credits.tutorial}</td>
-                        </tr>
-                        <tr>
-                            <td className="py-2">Practical</td>
-                            <td className="text-right">{course.credits.practical}</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <CardContent className="p-4 flex flex-grow flex-col justify-between bg-black">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="flex flex-col w-1/3 items-center text-center text-white p-2 rounded shadow border">
+                        <span className="text-sm font-medium">Theory</span>
+                        <span className="text-xl font-bold">{course.credits.theory}</span>
+                    </div>
+                    <span className="text-white text-lg font-bold">:</span>
+                    <div className="flex flex-col w-1/3 items-center text-center text-white p-2 rounded shadow border">
+                        <span className="text-sm font-medium">Tutorial</span>
+                        <span className="text-xl font-bold">{course.credits.tutorial}</span>
+                    </div>
+                    <span className="text-white text-lg font-bold">:</span>
+                    <div className="flex flex-col w-1/3 items-center text-center text-white p-2 rounded shadow border">
+                        <span className="text-sm font-medium">Practical</span>
+                        <span className="text-xl font-bold">{course.credits.practical}</span>
+                    </div>
+                </div>
                 {course.options && (
                     <div>
                         <Select>

@@ -1,11 +1,16 @@
+import { Separator } from "@radix-ui/react-select"
+
 interface HeadingProps {
     heading: string
 }
 
 const Heading: React.FC<HeadingProps> = ({heading}) => {
     return (
-        <div className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 mt-10 font-extrabold pb-2 border-b-2 text-4xl m-auto text-center">
-            {heading}
+        <div className="mt-10 mb-5 text-center">
+            <h1 className="text-white font-extrabold text-4xl">
+                {heading}
+            </h1>
+            <Separator className="bg-white font-extrabold text-4xl h-[2px] w-full mx-auto mt-4" />
         </div>
     )
 }
