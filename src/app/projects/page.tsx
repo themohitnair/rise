@@ -4,7 +4,8 @@ import githubFetchRepoInformation from "./ghUtils";
 import projectsList from "./projectsList";
 
 export const metadata: Metadata = {
-  title: 'RIT ISE - Projects',
+    title: 'RIT ISE - Projects',
+    description: "Projects made by the students of RIT ISE"
 }
 
 async function getProjects() {

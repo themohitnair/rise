@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./Navbar";
+import { Footer } from "./Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from 'next'
 
@@ -19,20 +20,25 @@ export const metadata: Metadata = {
     }
 }
 
-export default function RootLayout({ children, }: { children: React.ReactNode; }) {
+export default function RootLayout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
     return (
-        <html lang="en">
-        <body className="font-fira">
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-            >
-                <Navbar />
-                {children}
-            </ThemeProvider>
-        </body>
+        <html lang="en" suppressHydrationWarning>
+            <body className="font-fira">
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Navbar />
+                    <main className="min-h-screen">{children}</main>
+                    <Footer />
+                </ThemeProvider>
+            </body>
         </html>
     );
 }

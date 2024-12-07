@@ -3,6 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: 'RIT ISE - Links',
+    description: "Some important links"
 }
 
 export default function Home() {

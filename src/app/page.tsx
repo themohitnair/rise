@@ -2,9 +2,11 @@ import Contribute from "./Contribute";
 import Info from "./Info";
 import Welcome from "./Welcome";
 import { Metadata } from "next";
+import Links from "./Links";
 
 export const metadata: Metadata = {
     title: 'RIT ISE - Home',
+    description: "Official Website of the ISE Department, RIT, Bangalore."
 }
 
 export default function Home() {
@@ -21,6 +23,7 @@ export default function Home() {
             ))}
 
             <Contribute/>
+            <Links></Links>
         </div>
     );
 }

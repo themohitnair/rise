@@ -8,6 +8,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: 'RIT ISE - Resources',
+    description: 'Resources for every ISE student'
 }
 
 export default function ResourcesPage() {
@@ -30,7 +31,7 @@ export default function ResourcesPage() {
         <div className="w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-6/7 m-auto">
             <InfoPoints prelim={prelim} points={points} />
             <Heading heading="Syllabus" />
-            <div className="space-y-2 mt-4 flex flex-col w-full md:flex-row md:space-x-2 md:space-y-0">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
                 <Syllabus year={"First"} pdfPath="/pdfs/syllabus/firstyear.pdf" />
                 <Syllabus year={"Second"} pdfPath="/pdfs/syllabus/secondyear.pdf" />
                 <Syllabus year={"Third"} pdfPath="/pdfs/syllabus/thirdyear.pdf" />
