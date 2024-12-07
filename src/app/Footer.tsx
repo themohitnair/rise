@@ -25,7 +25,7 @@ export function Footer() {
                             rel="noopener noreferrer"
                             className="flex items-center text-lg font-semibold hover:text-white transition-colors space-x-1"
                         >
-                            <span>Source Code</span>
+                            <span className="text-sm text-gray-400">Source Code</span>
                         </Link>
                     </div>
                 </div>
