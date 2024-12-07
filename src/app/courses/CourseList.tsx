@@ -108,19 +108,21 @@ function CourseCard({ course }: { course: Course }) {
                 </table>
                 {course.options && (
                     <div>
-                        <p className="mb-2 text-sm font-medium text-muted-foreground">
-                            Elective Options:
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            {course.options.map((option, index) => (
-                                <span
-                                    key={index}
-                                    className="px-3 py-1 text-xs font-semibold text-white bg-black rounded"
-                                >
-                                    {option}
-                                </span>
-                            ))}
-                        </div>
+                        <Select>
+                            <SelectTrigger className="w-full">
+                                <span className="text-gray-500">Elective Options</span>
+                            </SelectTrigger>
+                            <SelectContent>
+                                {course.options.map((option) => (
+                                    <SelectItem
+                                        key={option}
+                                        value={option.toString()}
+                                    >
+                                        {option}
+                                    </SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
                     </div>
                 )}
             </CardContent>

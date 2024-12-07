@@ -5,6 +5,7 @@ import allResources from "./ResourceList"
 import Syllabus from "./Syllabus"
 import InfoPoints from "./InfoPoints"
 import { Metadata } from "next"
+import Contribute from "./Contribute"
 
 export const metadata: Metadata = {
     title: 'RIT ISE - Resources',
@@ -30,6 +31,7 @@ export default function ResourcesPage() {
     return (
         <div className="w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-6/7 m-auto">
             <InfoPoints prelim={prelim} points={points} />
+            <Contribute/>
             <Heading heading="Syllabus" />
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
                 <Syllabus year={"First"} pdfPath="/pdfs/syllabus/firstyear.pdf" />

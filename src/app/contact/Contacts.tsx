@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FaDiscord, FaReddit } from 'react-icons/fa';
 import { IoSchool } from 'react-icons/io5';
-import Heading from "./Heading";
+import Heading from "../Heading";
 
 interface SocialProps {
     platform: string;
@@ -9,7 +9,7 @@ interface SocialProps {
     icon: React.ReactNode;
 }
 
-const Link: React.FC<SocialProps> = ({ platform, link, icon }) => {
+const Contact: React.FC<SocialProps> = ({ platform, link, icon }) => {
     return (
         <Button className="w-full h-10 py-4 sm:py-3">
             <a href={link} className="block w-full">
@@ -26,7 +26,7 @@ const Link: React.FC<SocialProps> = ({ platform, link, icon }) => {
     );
 };
 
-const Links: React.FC = () => {
+const Contacts: React.FC = () => {
     const socials = [
         {platform: "MSRIT Discord", link: "https://discord.gg/W7yMs9E9Eb", icon: <FaDiscord size={24} />},
         {platform: "MSRIT Archive Hub", link: "https://discord.gg/kRkGRqC5ZX", icon: <FaDiscord size={24} />},
@@ -36,11 +36,11 @@ const Links: React.FC = () => {
 
     return (
         <div className="socials mb-10">
-            <Heading heading="Links"/>
+            <Heading heading="Contact Us"/>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
                 {socials.map((item, key) => (
                     <div className="social" key={key}>
-                        <Link platform={item.platform} link={item.link} icon={item.icon} />
+                        <Contact platform={item.platform} link={item.link} icon={item.icon} />
                     </div>
                 ))}
             </div>
@@ -48,4 +48,4 @@ const Links: React.FC = () => {
     );
 };
 
-export default Links;
+export default Contacts
