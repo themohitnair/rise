@@ -12,7 +12,7 @@ export function Footer() {
                             href="https://github.com/themohitnair" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="flex items-center text-lg font-semibold hover:text-white transition-colors space-x-1"
+                            className="flex items-center text-lg font-semibold hover:text-white transition-colors space-x-1 hover:scale-105 duration-200"
                         >
                             <FaGithub size={20} className='mr-2 ml-2'/>
                             <span>Mohit Nair</span>

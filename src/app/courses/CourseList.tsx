@@ -68,7 +68,7 @@ function CourseCard({ course }: { course: Course }) {
     const totalCredits = course.credits.theory + course.credits.tutorial + course.credits.practical;
 
     return (
-        <Card className="overflow-hidden flex flex-col">
+        <Card className="overflow-hidden flex flex-col hover:scale-105 duration-200">
             <CardHeader className="bg-primary/10 pb-2 flex-shrink-0">
                 <div className="flex flex-wrap items-baseline justify-between mb-1 gap-2">
                     <span className="text-sm font-mono text-primary">{course.id}</span>

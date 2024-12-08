@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 interface NavItemProps {
     href: string
@@ -68,9 +69,9 @@ export default function Navbar() {
                     <ul className="flex flex-col space-y-4 items-end">
                         {navItems.map((item, index) => (
                             <li key={index}>
-                                <a href={item.href} className="text-foreground hover:text-foreground/70 transition duration-200 ease-in-out">
+                                <Link href={item.href} className="text-foreground hover:text-foreground/70 transition duration-200 ease-in-out">
                                     {item.label}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

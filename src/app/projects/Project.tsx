@@ -17,7 +17,7 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({owner, name, description, ghlink, languages = [], stars = 0}) => {
     return (
-        <Card className="w-full my-4 bg-primary/10">
+        <Card className="w-full my-4 bg-primary/10 hover:scale-105 duration-200">
             <CardHeader>
                 <div className="heading flex justify-between items-center">
                 <div className="name text-xl font-bold">
