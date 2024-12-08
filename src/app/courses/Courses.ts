@@ -12,6 +12,38 @@ export interface Course {
 
 export const courses: Course[] = [
     {
+        id: "AECP17/27",
+        title: "A Scientific Approach to Health",
+        credits: {
+            theory: 1,
+            tutorial: 0,
+            practical: 0
+        },
+        semester: 1
+    },
+    {
+        id: "PPC18",
+        title: "Principles of Programming Using C",
+        credits: {
+            theory: 2,
+            tutorial: 0,
+            practical: 1
+        },
+        semester: 1
+    },
+
+    {
+        id: "AECC17/27",
+        title: "Design Thinking",
+        credits: {
+            theory: 2,
+            tutorial: 0,
+            practical: 0
+        },
+        semester: 2
+    },
+
+    {
         id: "IS31",
         title: "Laplace Transforms & Vector Space",
         credits: {
@@ -387,5 +419,83 @@ export const courses: Course[] = [
             practical: 4,
         },
         semester: 6,
+    },
+
+    {
+        id: "IS71",
+        title: "Distributed Computing",
+        credits: {
+            theory: 3,
+            tutorial: 0,
+            practical: 1
+        },
+        semester: 7
+    },
+    {
+        id: "IS72",
+        title: "Information Security",
+        credits: {
+            theory: 3,
+            tutorial: 0,
+            practical: 0
+        },
+        semester: 7
+    },
+    {
+        id: "IS73x",
+        title: "Program Elective Course - IV",
+        credits: {
+            theory: 3,
+            tutorial: 0,
+            practical: 0
+        },
+        semester: 7,
+        options: [
+            "Deep Learning",
+            "Predictive Analysis",
+            "Statistical Machine Learning",
+            "Software Testing"
+        ]
+    },
+    {
+        id: "ISL74",
+        title: "Data Visualization Lab Using PySpark and Tableau",
+        credits: {
+            theory: 0,
+            tutorial: 1,
+            practical: 2
+        },
+        semester: 7
+    },
+    {
+        id: "ISL75",
+        title: "Big Data Lab",
+        credits: {
+            theory: 0,
+            tutorial: 0,
+            practical: 1
+        },
+        semester: 7
+    },
+
+    {
+        id: "ISP81",
+        title: "Project Work",
+        credits: {
+            theory: 0,
+            tutorial: 0,
+            practical: 12
+        },
+        semester: 8
+    },
+    {
+        id: "INT82",
+        title: "Research/Industrial Internship",
+        credits: {
+            theory: 0,
+            tutorial: 0,
+            practical: 5
+        },
+        semester: 8
     },
 ];
