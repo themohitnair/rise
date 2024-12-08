@@ -77,7 +77,7 @@ function CourseCard({ course }: { course: Course }) {
                 <div className="flex flex-wrap items-center gap-2">
                     <CardTitle className="text-lg break-words">{course.title}</CardTitle>
                     {course.options && (
-                        <span className="px-2 py-1 text-xs font-semibold text-white bg-secondary rounded">
+                        <span className="px-2 py-1 text-xs font-semibold text-white bg-black rounded">
                             Elective
                         </span>
                     )}
