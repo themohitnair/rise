@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/button"
 import { Github } from "lucide-react"
 
 interface ProjectProps {
-  owner: string
-  name: string
-  description: string
-  ghlink: string
-  languages?: {
+    owner: string
     name: string
-    percentage: number
-    color: string
-  }[]
-  stars?: number
+    description: string
+    ghlink: string
+    languages?: {
+        name: string
+        percentage: number
+        color: string
+    }[]
+    stars?: number
 }
 
 const Project: React.FC<ProjectProps> = ({owner, name, description, ghlink, languages = [], stars = 0}) => {
