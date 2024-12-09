@@ -1,33 +1,59 @@
-import { Button } from "@/components/ui/button";
-import Heading from "../Heading";
-import { Mail, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button"
+import Heading from "../Heading"
+import React from 'react'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { Mail, Phone } from "lucide-react"
 
-interface SocialProps {
-    data: string;
-    icon: React.ReactNode;
+interface ContactProps {
+    primaryData: string
+    secondaryData: string
+    icon: React.ReactNode
+    label: string
 }
 
-const Contact: React.FC<SocialProps> = ({ data, icon }) => {
+export const Contact: React.FC<ContactProps> = ({ primaryData, secondaryData, icon, label }) => {
     return (
-        <Button className="w-full h-10 py-4 sm:py-3">
-            <div className="block w-full">
-                <div className="flex justify-between items-center w-full">
-                    <div className="data">
-                        {data}
-                    </div>
-                    <div className="icon">
-                        {icon}
-                    </div>                    
-                </div>
-            </div>
-        </Button>
-    );
-};
+        <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    <Button className="w-full h-auto py-2 px-4">
+                        <div className="flex items-center justify-between w-full">
+                            <div className="flex flex-col items-start">
+                                <span className="font-medium text-sm">{primaryData}</span>
+                                <span className="text-xs text-muted-foreground">{secondaryData}</span>
+                            </div>
+                            <div className="text-secondary">{icon}</div>
+                        </div>
+                    </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>{label}</p>
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
+    )
+}
 
 const Contacts: React.FC = () => {
     const contacts = [
-        {data: "+1 234 567 890", icon: <Phone size={24} />},
-        {data: "riserit@proton.me", icon: <Mail size={24} />},
+        {
+            primaryData: "+1 234 567 890", 
+            secondaryData: "Department Office",
+            icon: <Phone size={24} />,
+            label: "Call our main office"
+        },
+        {
+            primaryData: "hod@example.com", 
+            secondaryData: "Head of Department",
+            icon: <Mail size={24} />,
+            label: "Mail the Head of Department (ISE)"
+        },
+        {
+            primaryData: "riserit@proton.me", 
+            secondaryData: "Resource Contribution",
+            icon: <Mail size={24} />,
+            label: "Contribute Resources to this website via Mail"
+        },
     ];
 
     return (
@@ -36,7 +62,12 @@ const Contacts: React.FC = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
                 {contacts.map((item, key) => (
                     <div className="social" key={key}>
-                        <Contact data={item.data} icon={item.icon} />
+                        <Contact
+                            primaryData={item.primaryData}
+                            secondaryData={item.secondaryData}
+                            icon={item.icon}
+                            label={item.label}
+                        />
                     </div>
                 ))}
             </div>

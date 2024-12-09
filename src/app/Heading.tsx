@@ -10,7 +10,7 @@ const Heading: React.FC<HeadingProps> = ({heading}) => {
             <h1 className="text-white text-4xl">
                 {heading}
             </h1>
-            <Separator className="bg-white font-extrabold text-4xl h-[2px] w-full mx-auto mt-4" />
+            <Separator className="bg-gray-800 font-extrabold text-4xl h-[2px] w-full mx-auto mt-4" />
         </div>
     )
 }
