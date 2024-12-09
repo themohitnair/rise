@@ -13,7 +13,7 @@ interface MagazineProps {
 export const MagazineCard: React.FC<MagazineProps> = ({ title, pdfPath, year }) => {
     return (
         <Card className="overflow-hidden bg-primary/10 border border-gray-800 hover:scale-105 duration-200">
-            <div className="relative p-6 flex flex-col justify-between">
+            <div className="p-6 flex flex-col justify-between">
                 <div>
                     <CardHeader className="p-0">
                         <CardTitle className="text-lg font-semibold text-gray-100 group-hover:text-white transition-all">

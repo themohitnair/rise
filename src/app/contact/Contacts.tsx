@@ -20,7 +20,7 @@ export const Contact: React.FC<ContactProps> = ({ primaryData, secondaryData, ic
                         <div className="flex items-center justify-between w-full">
                             <div className="flex flex-col items-start">
                                 <span className="font-medium text-sm">{primaryData}</span>
-                                <span className="text-xs text-muted-foreground">{secondaryData}</span>
+                                <span className="text-xs text-gray-500">{secondaryData}</span>
                             </div>
                             <div className="text-secondary">{icon}</div>
                         </div>
