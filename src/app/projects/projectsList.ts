@@ -28,6 +28,10 @@ const projectsList: ProjectData[] = [
     {
         owner: "themohitnair",
         repo: "rise"
+    },
+    {
+        owner: "themohitnair",
+        repo: "rit-titlepage"
     }
 ];
 
