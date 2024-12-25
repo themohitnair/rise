@@ -37,12 +37,12 @@ export function CourseList({ courses }: CourseListProps) {
                 </Select>
             </div>
             <Tabs value={activeSemester} onValueChange={setActiveSemester} className="w-full">
-                <TabsList className="hidden md:flex justify-start mb-4 overflow-x-auto">
+                <TabsList className="hidden md:flex md:justify-between mb-4 overflow-y-auto">
                     {semesters.map((semester) => (
                         <TabsTrigger 
                             key={semester} 
                             value={semester.toString()}
-                            className="px-3 py-1 text-sm whitespace-nowrap"
+                            className="w-full mx-1 px-3 py-1 text-sm whitespace-nowrap"
                         >
                             Semester {semester}
                         </TabsTrigger>

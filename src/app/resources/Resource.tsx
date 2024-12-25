@@ -11,7 +11,7 @@ export interface ResourceProps {
 
 const Resource: React.FC<ResourceProps> = ({ name, link }) => {
     return (
-        <Card className="w-full mb-2 hover:scale-105 duration-200">
+        <Card className="w-full mb-2">
             <a href={link} className="block" target="_blank" rel="noopener noreferrer">
                 <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex justify-between items-center">

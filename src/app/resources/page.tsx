@@ -1,18 +1,21 @@
-import React from "react"
-import Resources from "./Resources"
+'use client'
+
+import React, { useState } from "react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
 import Heading from "../Heading"
-import allResources from "./ResourceList"
+import Resources from "./Resources"
 import Syllabus from "./Syllabus"
 import InfoPoints from "./InfoPoints"
-import { Metadata } from "next"
 import Contribute from "./Contribute"
-
-export const metadata: Metadata = {
-    title: 'RIT ISE - Resources',
-    description: 'Resources for every ISE student'
-}
+import YouTubeChannels from "./YoutubeChannels"
+import allResources from "./ResourceList"
 
 export default function ResourcesPage() {
+    const tabs = ["resources", "syllabus", "youtube", "contribute"]
+    const [activeTab, setActiveTab] = useState("resources")
+
     const prelim: string =
         "Here are some important points to remember about the notes and resource links hosted here: "
 
@@ -24,23 +27,72 @@ export default function ResourcesPage() {
         "Lab Repositories might need updation in the future with changing curriculum. You are free to send pull requests to update the repositories or otherwise (for other corrections and changes).",
         "The website or its makers aren't liable for any harm or misunderstanding caused by the notes links hosted here. Use them at your own risk. These are crowdsourced notes and resources.",
         <>
-        To contribute to these notes, mail us at <a href={`mailto:${email}`} className="hover:text-gray-500">{email}</a> with the links or documents. At the beginning of such mail submissions, mention the year (20XX), semester (1-8) and subject. For instance, &apos;2022 3rd OS&apos; signifies a submission to contribute to the Operating System subject resources for the 3rd semester for the Academic year 2022-23.
+            To contribute to these notes, mail us at <a href={`mailto:${email}`} className="text-blue-600 hover:text-blue-800">
+                {email}
+            </a> with the links or documents. At the beginning of such mail submissions, mention the year (20XX), semester (1-8) and subject. For instance, &apos;2022 3rd OS&apos; signifies a submission to contribute to the Operating System subject resources for the 3rd semester for the Academic year 2022-23.
         </>,
     ]
 
     return (
-        <div className="min-h-[calc(100vh-4rem-4rem)] w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-6/7 m-auto">
-            <InfoPoints prelim={prelim} points={points} />
-            <Contribute/>
-            <Heading heading="Syllabus" />
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
-                <Syllabus year={"First"} pdfPath="/pdfs/syllabus/firstyear.pdf" />
-                <Syllabus year={"Second"} pdfPath="/pdfs/syllabus/secondyear.pdf" />
-                <Syllabus year={"Third"} pdfPath="/pdfs/syllabus/thirdyear.pdf" />
-                <Syllabus year={"Fourth"} pdfPath="/pdfs/syllabus/fourthyear.pdf" />
+        <div className="min-h-[calc(100vh-4rem-4rem)] w-11/12 max-w-6xl mx-auto py-8">
+            <div className="mb-6">
+                <Heading heading="Resources" />
             </div>
-            <Heading heading="Semester-wise Resource Links" />
-            <Resources resources={allResources} />
+
+            <div className="md:hidden mb-4">
+                <Select onValueChange={setActiveTab} defaultValue={activeTab}>
+                    <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select Tab" />
+                    </SelectTrigger>
+                    <SelectContent>
+                        {tabs.map((tab) => (
+                            <SelectItem key={tab} value={tab}>
+                                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                            </SelectItem>
+                        ))}
+                    </SelectContent>
+                </Select>
+            </div>
+
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="hidden md:grid md:grid-cols-4 mb-4">
+                {tabs.map((tab) => (
+                    <TabsTrigger 
+                        key={tab} 
+                        value={tab}
+                        className="px-3 py-1 text-sm text-center"
+                    >
+                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                    </TabsTrigger>
+                ))}
+            </TabsList>
+
+                <TabsContent value="resources">
+                    <Heading heading="Resources" />
+                    <InfoPoints prelim={prelim} points={points} />
+                    <Separator className="my-8" />
+                    <Resources resources={allResources}/>
+                </TabsContent>
+
+                <TabsContent value="syllabus">
+                    <Heading heading="Syllabus" />
+                    <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
+                        <Syllabus year="First" pdfPath="/pdfs/syllabus/firstyear.pdf" />
+                        <Syllabus year="Second" pdfPath="/pdfs/syllabus/secondyear.pdf" />
+                        <Syllabus year="Third" pdfPath="/pdfs/syllabus/thirdyear.pdf" />
+                        <Syllabus year="Fourth" pdfPath="/pdfs/syllabus/fourthyear.pdf" />
+                    </div>
+                </TabsContent>
+
+                <TabsContent value="youtube">
+                    <Heading heading="Recommended YouTube Channels" />
+                    <YouTubeChannels />
+                </TabsContent>
+
+                <TabsContent value="contribute">
+                    <Contribute />
+                </TabsContent>
+            </Tabs>
         </div>
     )
 }
