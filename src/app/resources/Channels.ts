@@ -40,7 +40,7 @@ export const youtubeChannels: Channel[] = [
         name: "Tikle's Academy",
         url: "https://www.youtube.com/@TIKLESACADEMY/",
         subjects: ["Computer Aided Engineering Drawing"],
-        semesters: [3, 4, 5]
+        semesters: [2]
     },
     {
         name: "Tikle's Academy of Maths",
