@@ -9,7 +9,7 @@ import {
 import { FileText } from "lucide-react"
 
 interface SyllabusDialogProps {
-    year: "First" | "Second" | "Third" | "Fourth"
+    year: "1st" | "2nd" | "3rd" | "4th"
     pdfPath: string
 }
 
@@ -20,7 +20,7 @@ const SyllabusDialog: React.FC<SyllabusDialogProps> = ({ year, pdfPath }) => (
                 variant="outline" 
                 className="flex items-center justify-start py-5 bg-white text-black border-black hover:bg-gray-100 hover:text-black"
             >
-                <FileText className="mr-2 text-black" /> {year} Year
+                <FileText className="mr-2 text-black" /> {year} Year Syllabus
             </Button>
         </DialogTrigger>
 

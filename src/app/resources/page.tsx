@@ -35,10 +35,6 @@ export default function ResourcesPage() {
 
     return (
         <div className="min-h-[calc(100vh-4rem-4rem)] w-11/12 max-w-6xl mx-auto py-8">
-            <div className="mb-6">
-                <Heading heading="Resources" />
-            </div>
-
             <div className="md:hidden mb-4">
                 <Select onValueChange={setActiveTab} defaultValue={activeTab}>
                     <SelectTrigger className="w-full">
@@ -60,7 +56,7 @@ export default function ResourcesPage() {
                     <TabsTrigger 
                         key={tab} 
                         value={tab}
-                        className="px-3 py-1 text-sm text-center"
+                        className="px-3 py-1 text-sm text-center mx-1"
                     >
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </TabsTrigger>
@@ -68,19 +64,17 @@ export default function ResourcesPage() {
             </TabsList>
 
                 <TabsContent value="resources">
-                    <Heading heading="Resources" />
                     <InfoPoints prelim={prelim} points={points} />
                     <Separator className="my-8" />
                     <Resources resources={allResources}/>
                 </TabsContent>
 
                 <TabsContent value="syllabus">
-                    <Heading heading="Syllabus" />
-                    <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
-                        <Syllabus year="First" pdfPath="/pdfs/syllabus/firstyear.pdf" />
-                        <Syllabus year="Second" pdfPath="/pdfs/syllabus/secondyear.pdf" />
-                        <Syllabus year="Third" pdfPath="/pdfs/syllabus/thirdyear.pdf" />
-                        <Syllabus year="Fourth" pdfPath="/pdfs/syllabus/fourthyear.pdf" />
+                    <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-20 m-auto gap-5">
+                        <Syllabus year="1st" pdfPath="/pdfs/syllabus/firstyear.pdf" />
+                        <Syllabus year="2nd" pdfPath="/pdfs/syllabus/secondyear.pdf" />
+                        <Syllabus year="3rd" pdfPath="/pdfs/syllabus/thirdyear.pdf" />
+                        <Syllabus year="4th" pdfPath="/pdfs/syllabus/fourthyear.pdf" />
                     </div>
                 </TabsContent>
 

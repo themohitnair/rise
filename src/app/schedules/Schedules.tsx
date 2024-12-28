@@ -7,10 +7,10 @@ const SchedulesPage: React.FC = () => {
 
     return (
         <div>
-            <Heading heading="Semester-wise Timetables"/>
+            <Heading heading="Timetables"/>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-5 m-auto gap-5">
-                <TimetableDialog semester="Third" pdfPath={thirdSemesterTimetable} />
-                <TimetableDialog semester="Fifth" pdfPath={fifthSemesterTimetable} />
+                <TimetableDialog semester="Three" pdfPath={thirdSemesterTimetable} />
+                <TimetableDialog semester="Five" pdfPath={fifthSemesterTimetable} />
             </div>
         </div>
     );

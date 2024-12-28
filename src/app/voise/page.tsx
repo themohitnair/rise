@@ -19,7 +19,6 @@ export default function MagazinePage() {
     return (
         <div className="min-h-[calc(100vh-4rem-4rem)] bg-black text-white">
             <div className="w-4/5 mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <Heading heading="VoISE Magazine" />
                 <p className="text-center text-white mb-12 mx-auto">
                     Explore the latest editions of VoISE, showcasing the vibrant world of Information Science and Engineering at RIT Bangalore.
                 </p>

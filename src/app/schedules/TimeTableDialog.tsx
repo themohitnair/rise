@@ -6,10 +6,10 @@ import {
     DialogTitle,
     DialogDescription,
 } from "@/components/ui/dialog";
-import { Calendar } from "lucide-react";
+import { Calendar } from 'lucide-react';
 
 interface TimetableDialogProps {
-    semester: "Third" | "Fourth" | "Fifth" | "Sixth" | "Seventh" | "Eighth";
+    semester: string;
     pdfPath: string;
 }
 
@@ -18,26 +18,30 @@ const TimetableDialog: React.FC<TimetableDialogProps> = ({ semester, pdfPath }) 
         <DialogTrigger asChild>
             <Button
                 variant="outline"
-                className="flex items-center justify-start py-5 bg-white text-black border-black hover:bg-gray-100 hover:text-black"
+                className="w-full h-full py-8 bg-white text-black border border-gray-200 hover:bg-gray-100 hover:text-black transition-colors duration-200 rounded-lg shadow-md"
             >
-                <Calendar className="mr-2 text-black" /> {semester} Semester Timetable
+                <div className="flex flex-col items-center justify-center space-y-2">
+                    <Calendar className="w-8 h-8 text-gray-600" />
+                    <span className="text-lg font-semibold">Semester {semester}</span>
+                </div>
             </Button>
         </DialogTrigger>
 
         <DialogContent className="w-[90vw] max-w-full h-[80vh] max-h-[90vh] p-4 rounded-lg border flex flex-col">
-            <DialogTitle asChild className="flex justify-center items-center">
-                <h2>{semester} Semester Timetable</h2>
+            <DialogTitle className="text-center text-2xl font-bold mb-4">
+                Semester {semester} Timetable
             </DialogTitle>
-            <DialogDescription asChild className="hidden">
-                <p>The timetable content for the selected semester.</p>
+            <DialogDescription className="sr-only">
+                The timetable content for Semester {semester}.
             </DialogDescription>
             <iframe
                 src={pdfPath}
                 className="rounded-md border h-full w-full"
                 style={{ flexGrow: 1 }}
+                title={`Semester ${semester} Timetable`}
             />
         </DialogContent>
     </Dialog>
 );
 
-export default TimetableDialog
+export default TimetableDialog;
