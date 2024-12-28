@@ -1,5 +1,4 @@
 import Info from "../Info"
-import Heading from "../Heading"
 
 const Contribute: React.FC = () => {
     const email = "riserit@proton.me"

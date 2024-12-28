@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
 import { MagazineCard } from "./MagazineCard";
-import Heading from "../Heading";
 
 export const metadata: Metadata = {
     title: "RIT ISE - VoISE Magazines",
