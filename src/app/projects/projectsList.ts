@@ -7,15 +7,7 @@ interface ProjectData {
 const projectsList: ProjectData[] = [
     {
         owner: "themohitnair",
-        repo: "skyblog",
-    },
-    {
-        owner: "themohitnair",
         repo: "sfnx"
-    },
-    {
-        owner: "themohitnair",
-        repo: "distrowiz"
     },
     {
         owner: "uttamkn",

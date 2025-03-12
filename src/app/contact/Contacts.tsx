@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import Heading from "../Heading"
 import React from 'react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Mail, Phone } from "lucide-react"
+import { Mail } from "lucide-react"
 
 interface ContactProps {
     primaryData: string
@@ -36,18 +36,6 @@ export const Contact: React.FC<ContactProps> = ({ primaryData, secondaryData, ic
 
 const Contacts: React.FC = () => {
     const contacts = [
-        {
-            primaryData: "+1 234 567 890", 
-            secondaryData: "Department Office",
-            icon: <Phone size={24} />,
-            label: "Call our main office"
-        },
-        {
-            primaryData: "hod@example.com", 
-            secondaryData: "Head of Department",
-            icon: <Mail size={24} />,
-            label: "Mail the Head of Department (ISE)"
-        },
         {
             primaryData: "riserit@proton.me", 
             secondaryData: "Resource Contribution",

@@ -53,6 +53,12 @@ export const youtubeChannels: Channel[] = [
         url: "https://www.youtube.com/@MichaelSambol",
         subjects: ["Design and Analysis of Algorithms"],
         semesters: [4]
+    },
+    {
+        name: "College Friendly",
+        url: "https://www.youtube.com/@collegefriendly",
+        subjects: ["Computer Vision"],
+        semesters: [5]
     }
 ];
 

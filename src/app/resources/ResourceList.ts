@@ -111,7 +111,7 @@ const allResources: ResourceProps[] = [
     },
     {
         name: "Advanced Java Lab Repository",
-        link: "https://github.com/themohitnair/AdvJava",
+        link: "https://github.com/themohitnair/AdvancedJavaLab",
         year: 2023, 
         semester: 4
     },

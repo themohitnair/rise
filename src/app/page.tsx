@@ -7,7 +7,10 @@ const Home = () => {
             <div className="w-4/5 xl:w-4/5 lg:w-4/5 sm:w-5/6 xs:w-11/12 max-w-4xl text-center">
                 <Welcome />
                 <p className="mt-5 text-xl">
-                    The official website of the Information Science and Engineering branch in Ramaiah Institute of Technology, Bengaluru.
+                    The crowdsourced and crown-maintained website of the Information Science and Engineering branch in Ramaiah Institute of Technology, Bengaluru.
+                </p>
+                <p className="mt-5 text-sm">
+                    We are not officially affiliated with the college or the university. We are a group of students who are trying to make the lives of our juniors easier.
                 </p>
             </div>
         </div>
