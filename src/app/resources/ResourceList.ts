@@ -198,6 +198,12 @@ const allResources: ResourceProps[] = [
         link: "https://github.com/themohitnair/DVLab",
         year: 2024,
         semester: 5
+    },
+    {
+        name: "Machine Learning Lab Repository",
+        link: "https://github.com/themohitnair/MLLab",
+        year: 2025,
+        semester: 6
     }
 ]
 
