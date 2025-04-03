@@ -200,6 +200,12 @@ const allResources: ResourceProps[] = [
         semester: 5
     },
     {
+        name: "Database Management Systems Lab Repository",
+        link: "https://github.com/themohitnair/DBMSLab",
+        year: 2024,
+        semester: 4
+    },
+    {
         name: "Machine Learning Lab Repository",
         link: "https://github.com/themohitnair/MLLab",
         year: 2025,
