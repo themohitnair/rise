@@ -10,6 +10,10 @@ const projectsList: ProjectData[] = [
         repo: "sfnx"
     },
     {
+        owner: "themohitnair",
+        repo: "xivvy"
+    },
+    {
         owner: "uttamkn",
         repo: "mangaplace"
     },
