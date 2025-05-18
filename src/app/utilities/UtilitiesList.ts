@@ -15,9 +15,9 @@ export const utilityData = [
   },
   {
     id: "3",
-    title: "RIT TitleCraft",
+    title: "ritlecraft",
     description: "Create project titlepages with minimal editing",
-    url: "https://rit-titlepage.vercel.app",
+    url: "https://ritlepage.vercel.app",
     buttonText: "Try it out",
   },
   {
@@ -27,4 +27,11 @@ export const utilityData = [
     url: "https://densair.vercel.app",
     buttonText: "Try it out",
   },
+  {
+    id: "5",
+    title: "MSRIT Connect",
+    description: "Student Portal with a portable, more friendly UI",
+    url: "https://play.google.com/store/apps/details?id=com.nandan.msritconnect&pcampaignid=web_share",
+    button: "Try it out"
+  }
 ]
