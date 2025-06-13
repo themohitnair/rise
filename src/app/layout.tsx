@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import { Footer } from "./Footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
     title: 'RIT ISE',
@@ -38,6 +39,7 @@ export default function RootLayout({
                     <main>{children}</main>
                     <Footer />
                 </ThemeProvider>
+                <Analytics />
             </body>
         </html>
     );
