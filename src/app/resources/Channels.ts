@@ -59,6 +59,12 @@ export const youtubeChannels: Channel[] = [
         url: "https://www.youtube.com/@collegefriendly",
         subjects: ["Computer Vision"],
         semesters: [5]
+    },
+    {
+        name: "Mahesh Huddar",
+        url: "https://www.youtube.com/@MaheshHuddar",
+        subjects: ["Machine Learning"],
+        semesters: [6]
     }
 ];
 
