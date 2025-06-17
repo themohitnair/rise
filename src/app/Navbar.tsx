@@ -50,7 +50,6 @@ export default function Navbar() {
     }, [])
 
     const navItems = [
-        { href: "/courses", label: "Courses"},
         { href: "/resources", label: "Resources" },
         { href: "/projects", label: "Projects" },
         { href: "/utilities", label: "Utilities" },

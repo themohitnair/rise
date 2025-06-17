@@ -65,6 +65,12 @@ export const youtubeChannels: Channel[] = [
         url: "https://www.youtube.com/@MaheshHuddar",
         subjects: ["Machine Learning"],
         semesters: [6]
+    },
+    {
+        name: "Manoj Kumar Sahoo",
+        url: "https://www.youtube.com/@ManojKumarSahoo",
+        subjects: ["Project Management (OE)"],
+        semesters: [6]
     }
 ];
 

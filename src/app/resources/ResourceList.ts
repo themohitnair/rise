@@ -210,6 +210,12 @@ const allResources: ResourceProps[] = [
         link: "https://github.com/themohitnair/MLLab",
         year: 2025,
         semester: 6
+    },
+    {
+        name: "Textbooks",
+        link: "https://drive.google.com/drive/folders/1OFWlZYl5dQIYuqNplvKQJyCpQM-WharW?usp=sharing",
+        year: 2025,
+        semester: 6
     }
 ]
 
