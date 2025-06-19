@@ -14,7 +14,7 @@ export default function UtilitiesPage() {
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {utilityData.map((utility) => (
-          <Card key={utility.id} className="overflow-hidden bg-black hover:scale-105 duration-200">
+          <Card key={utility.id} className="border-none overflow-hidden bg-black hover:scale-105 duration-200">
             <CardHeader className="bg-primary/10">
               <CardTitle className="text-white">{utility.title}</CardTitle>
             </CardHeader>

@@ -53,7 +53,7 @@ export default function Navbar() {
         { href: "/resources", label: "Resources" },
         { href: "/projects", label: "Projects" },
         { href: "/utilities", label: "Utilities" },
-        { href: "/contact", label: "Contact" },        
+        { href: "/contact", label: "Contact" },
     ]
 
     return (

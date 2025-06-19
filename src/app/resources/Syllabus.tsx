@@ -18,7 +18,7 @@ const SyllabusDialog: React.FC<SyllabusDialogProps> = ({ year, pdfPath }) => (
         <DialogTrigger asChild>
             <Button 
                 variant="outline" 
-                className="flex items-center justify-start py-5 bg-white text-black border-black hover:bg-gray-100 hover:text-black"
+                className="flex items-center justify-start py-5 bg-white text-black border-none hover:bg-gray-100 hover:text-black"
             >
                 <FileText className="mr-2 text-black" /> {year} Year Syllabus
             </Button>

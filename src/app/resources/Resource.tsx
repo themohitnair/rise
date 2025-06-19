@@ -11,7 +11,7 @@ export interface ResourceProps {
 
 const Resource: React.FC<ResourceProps> = ({ name, link, year }) => {
     return (
-        <Card className="w-full mb-2">
+        <Card className="w-full mb-2 border-none">
             <a href={link} className="block" target="_blank" rel="noopener noreferrer">
                 <CardHeader className="p-4">
                 <CardTitle className="text-sm font-medium flex justify-between items-center">

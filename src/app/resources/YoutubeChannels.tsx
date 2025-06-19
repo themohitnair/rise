@@ -60,7 +60,7 @@ export default function YouTubeChannels() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredChannels.map((channel: Channel) => (
-                    <Card key={channel.name} className="overflow-hidden flex flex-col hover:scale-105 duration-200">
+                    <Card key={channel.name} className="border-none overflow-hidden flex flex-col hover:scale-105 duration-200">
                         <CardHeader>
                             <CardTitle className="text-lg">{channel.name}</CardTitle>
                             <CardDescription className="text-sm text-gray-500">
