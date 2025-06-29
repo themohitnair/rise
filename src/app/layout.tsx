@@ -8,10 +8,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
     title: 'RIT ISE',
-    description: 'The official site of ISE RIT, Bangalore',
+    description: 'The unofficial, crowdsourced site of ISE RIT, Bangalore',
     openGraph: {
         title: 'RIT ISE',
-        description: 'The official site of ISE RIT, Bangalore',
+        description: 'The unofficial, crowdsourced site of ISE RIT, Bangalore',
         url: 'https://riserit.vercel.app',
         siteName: 'RIT ISE',
         locale: 'en_US',
