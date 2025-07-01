@@ -22,13 +22,6 @@ export const utilityData = [
   },
   {
     id: "4",
-    title: "densAIr",
-    description: "Research Reading made easier",
-    url: "https://densair.vercel.app",
-    buttonText: "Try it out",
-  },
-  {
-    id: "5",
     title: "MSRIT Connect",
     description: "Student Portal with a portable, more friendly UI",
     url: "https://play.google.com/store/apps/details?id=com.nandan.msritconnect&pcampaignid=web_share",

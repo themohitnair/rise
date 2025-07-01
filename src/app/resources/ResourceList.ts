@@ -216,6 +216,12 @@ const allResources: ResourceProps[] = [
         link: "https://drive.google.com/drive/folders/1OFWlZYl5dQIYuqNplvKQJyCpQM-WharW?usp=sharing",
         year: 2025,
         semester: 6
+    },
+    {
+        name: "DevOps Lab Repository",
+        link: "https://github.com/themohitnair/htom",
+        year: 2025,
+        semester: 6
     }
 ]
 
