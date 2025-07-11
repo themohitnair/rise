@@ -222,6 +222,12 @@ const allResources: ResourceProps[] = [
         link: "https://github.com/themohitnair/htom",
         year: 2025,
         semester: 6
+    },
+    {
+        name: "Subjectwise Notes",
+        link: "https://drive.google.com/drive/folders/1K7oe0SCZ6GnjjA05mxrxMIPGDbEIC0Ps?usp=sharing",
+        year: 2025,
+        semester: 6
     }
 ]
 
