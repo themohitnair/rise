@@ -15,7 +15,7 @@ export const utilityData = [
   },
   {
     id: "3",
-    title: "ritlecraft",
+    title: "ritlepage",
     description: "Create project titlepages with minimal editing",
     url: "https://ritlepage.vercel.app",
     buttonText: "Try it out",
