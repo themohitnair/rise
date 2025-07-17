@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github } from "lucide-react"
+import { Github, Star } from "lucide-react"
 
 interface ProjectProps {
     owner: string
@@ -18,25 +18,26 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({owner, name, description, ghlink, languages = [], stars = 0}) => {
     return (
         <Card className="w-full border-none my-4 bg-primary/10 hover:scale-105 duration-200">
-            <CardHeader>
-                <div className="heading flex justify-between items-center">
+          <CardHeader>
+            <div className="heading flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                 <div className="name text-xl font-bold">
                     {owner}/{name}
                 </div>
-                <div className="flex items-center gap-4">
-                    {stars > 0 && (
-                    <span className="text-sm text-muted-foreground">
-                        ⭐ {stars}
-                    </span>
-                    )}
-                    <Button variant="outline" size="icon">
+                <div className="flex items-center gap-4 self-start sm:self-auto">
+                  {stars > 0 && (
+                    <div className="flex items-center gap-1 text-sm text-muted-foreground whitespace-nowrap">
+                      <Star className="w-4 h-4 fill-background text-white" />
+                        {stars}
+                    </div>
+                  )}
+                  <Button variant="outline" size="icon">
                     <a href={ghlink} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-6 w-6" />
+                      <Github className="h-6 w-6" />
                     </a>
-                    </Button>
-                </div>
-                </div>
-            </CardHeader>
+                  </Button>
+              </div>
+            </div>
+          </CardHeader>
             <CardContent>
                 <p className="">{description}</p>
             </CardContent>
